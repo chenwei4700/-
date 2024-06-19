@@ -21,3 +21,7 @@ th {
     width: 100px;
     max-width: 100px;
 }
+
+tr{
+    height: auto;
+}
