@@ -1,0 +1,24 @@
+.basic-table{
+    width: 800px;
+    height: auto;
+    margin:  0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 20px;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    background-image: url('海報.png');
+    /* 設置背景圖片 */
+    background-size: cover;
+    /* 使背景圖片覆蓋整個頁面 */
+    background-repeat: no-repeat;
+    /* 防止背景圖片重複 */
+    background-attachment: fixed;
+    /* 使背景圖片固定 */
+    background-position: center;
+    /* 使背景圖片居中 */
+}
