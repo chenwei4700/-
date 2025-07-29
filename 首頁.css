@@ -1,13 +1,14 @@
 .basic-table{
-    width: 800px;
+    width: 80vw;
     height: auto;
     margin:  0 auto;
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 20px;
+    padding: 3%;
 }
 
 html {
-    font-size: 18px;
+    font-size: 2vw;
 }
 
 body {
@@ -22,7 +23,4 @@ body {
     background-position: center;
     /* 使背景圖片居中 */
 }
-h2{
-    margin: 20px 0px 20px 0px;
 
-}
