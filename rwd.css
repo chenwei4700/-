@@ -1,0 +1,78 @@
+/* --- 通用樣式 --- */
+/* 讓圖片最大寬度為其容器的100%，高度自動調整以維持比例 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- RWD 規則：當螢幕寬度小於或等於 768px 時 (適用於平板和手機) --- */
+@media (max-width: 768px) {
+
+    /* 調整基本字體大小，讓整體文字小一點 */
+    html {
+        font-size: 16px;
+    }
+
+    /* --- 首頁 (首頁.css) --- */
+    /* 將 .basic-table 的固定寬度改為百分比，使其適應螢幕 */
+    .basic-table {
+        width: 95%; 
+    }
+
+    /* 調整清單的內距，避免過於靠左 */
+    ol, ul {
+        padding-left: 25px;
+    }
+
+    /* 調整標題字體大小，rem 是相對於根元素(html)的字體大小 */
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    /* --- 工作分配頁 & 行程表頁 --- */
+    /* 讓表格可以水平滾動，避免在小螢幕上版面被擠壓變形 */
+    table {
+        width: 100%;        /* 讓表格本身先嘗試填滿容器 */
+        display: block;     /* 改變表格的顯示方式，使其可以套用 overflow */
+        overflow-x: auto;   /* 當內容超出寬度時，產生水平滾動條 */
+        white-space: nowrap;/* 防止表格內的文字自動換行，保持原始排版 */
+    }
+    
+    /* 調整頁面標題的容器寬度 */
+    div[style*="margin-bottom: 30px"] {
+        width: 90% !important; /* 使用 !important 來覆蓋 HTML 中的行內樣式 */
+        text-align: center;
+    }
+
+    /* --- 首頁中圖片的容器微調 --- */
+    div[style*="height: 600px"] {
+        height: auto; /* 高度改為自動，由內容撐開 */
+        margin-left: auto; /* 取消固定邊距，使其置中 */
+        margin-right: auto;
+    }
+}
+
+/* --- RWD 規則：當螢幕寬度小於或等於 480px 時 (適用於大部分手機) --- */
+@media (max-width: 480px) {
+
+    /* 在更小的手機螢幕上，再次縮小字體 */
+    html {
+        font-size: 14px;
+    }
+
+    /* 調整 Bootstrap 導覽列的內距，讓 Logo 和漢堡選單按鈕不會貼邊 */
+    .navbar {
+        padding: .5rem .5rem;
+    }
+
+    /* 調整首頁清單的字體和行高，提升易讀性 */
+    .basic-table ol, .basic-table ul {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* 調整行前通知中的小表格寬度 */
+    ul table {
+        width: 90%; 
+    }
+}
